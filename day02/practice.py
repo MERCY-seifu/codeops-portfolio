@@ -1,36 +1,55 @@
-#variable and type
-student_name = "Almaz Bekele" # str
-age = 24 # int
-balance = 1500.50 # float (ETB)
-is_enrolled = True # bool
-verified = None # no value yet
-print(type(student_name)) # <class 'str'>
-print(type(age)) # <class 'int'>
-print(type(balance)) # <class 'float'>
-print(type(is_enrolled)) # <class 'bool'>
-print(type(verified)) # <class 'NoneType'>
+# 1. Temperature label
 
-#Type conversion
-age_text = input("Your age: ") # e.g. "24" (a string!)
-age = int(age_text) # 24 (now an int)
-next_year = age + 1 # works only after int()
-print("Next year you will be:", next_year)
+print("=== 1. Temperature label ===")
 
-#comparison
-balance = 1500 # ETB
-is_member = True
-balance == 1500 # True
-balance > 1000 and is_member # True
-not is_member # False
-print(balance == 1500) # True
-print(balance > 1000 and is_member) # True
-print(not is_member) # False
+temp = float(input("Enter a temperature in °C: "))
 
-# Control Flow
-balance = 1500 # ETB
-if balance >= 1000:
- print("Premium customer")
-elif balance >= 500:
- print("Standard customer")
+if temp < 15:
+    print("cold")
+elif temp <= 28:
+    print("warm")
 else:
- print("Basic customer")
+    print("hot")
+
+
+# 2. Receipt loop
+
+print("\n=== 2. Receipt loop ===")
+
+for n in range(1, 11):
+    print(f"Receipt #{n}")
+
+
+# 3. Even numbers
+
+print("\n=== 3. Even numbers ===")
+
+for n in range(1, 21):
+    if n % 2 == 0:
+        print(n)
+
+
+# 4. Discount function
+
+print("\n=== 4. Discount function ===")
+
+def apply_discount(price, percent=10):
+    return price - (price * percent / 100)
+
+# Test with default (10%)
+print(apply_discount(100))       # 90.0
+
+# Test with a custom percent
+print(apply_discount(100, 25))   # 75.0
+
+
+# 5. Countdown
+
+print("\n=== 5. Countdown ===")
+
+count = 5
+while count >= 1:
+    print(count)
+    count -= 1
+
+print("Liftoff!")
