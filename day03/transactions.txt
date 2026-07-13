@@ -1,0 +1,8 @@
+Abebe,150.50
+Kebede,320.00
+Abebe,75.25
+Marta,500.00
+Kebede,120.75
+Selam,45.00
+Abebe,200.00
+Marta,150.00
