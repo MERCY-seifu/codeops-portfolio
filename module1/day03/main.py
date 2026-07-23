@@ -3,8 +3,6 @@ REPORT_FILE = "report.txt"
 
 
 def read_transactions(filepath):
-    """Read transactions.txt line by line and build a dict of
-    customer -> total spend. Returns None if the file is missing."""
     totals = {}
     try:
         with open(filepath, "r") as f:
@@ -23,7 +21,6 @@ def read_transactions(filepath):
 
 
 def build_summary_lines(totals):
-    """Sort customers by total spend, highest first, and format output lines."""
     sorted_totals = sorted(totals.items(), key=lambda item: item[1], reverse=True)
     lines = []
     for name, total in sorted_totals:
@@ -32,7 +29,6 @@ def build_summary_lines(totals):
 
 
 def write_report(lines, filepath):
-    """Write the summary lines to report.txt."""
     with open(filepath, "w") as f:
         f.write("TeleBirr Transaction Summary\n")
         f.write("=============================\n")
@@ -44,7 +40,6 @@ def main():
     totals = read_transactions(TRANSACTIONS_FILE)
 
     if totals is None:
-        # Missing file was handled gracefully above; nothing more to do.
         return
 
     if not totals:

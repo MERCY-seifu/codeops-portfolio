@@ -1,5 +1,5 @@
 TeleBirr Transaction Summary
-
+=============================
 Marta: 650.00
 Kebede: 440.75
 Abebe: 425.75

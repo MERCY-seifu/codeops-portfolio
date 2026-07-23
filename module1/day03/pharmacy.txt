@@ -1,0 +1,8 @@
+Paracetamol,45
+Amoxicillin,28
+Bandages,105
+Insulin,6
+Vitamin C,30
+Cough Syrup,15
+Antacid,4
+Ibuprofen,25
