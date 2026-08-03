@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Habesha Eatery — Reservations, Menu & Location</title>
+  <meta name="description" content="Reserve a table at Habesha Eatery in Bole, Addis Ababa, browse our menu, and find us on the map.">
+</head>
+<body>
+
+  <header>
+    <h1>Habesha Eatery</h1>
+  </header>
+
+  <main>
+
+
+    <section aria-labelledby="reserve-heading">
+      <h2 id="reserve-heading">Reserve a Table</h2>
+
+      <form action="/reserve" method="post">
+
+        <label for="name">Full name</label>
+        <input id="name" name="name" type="text" required>
+
+        <label for="phone">Phone</label>
+        <input id="phone" name="phone" type="tel"
+               pattern="09[0-9]{8}"
+               placeholder="0912345678"
+               title="Format: 09 followed by 8 digits"
+               required>
+
+        <label for="guests">Guests</label>
+        <input id="guests" name="guests" type="number" min="1" max="20" required>
+
+        <label for="date">Date</label>
+        <input id="date" name="date" type="date" required>
+
+        <button type="submit">Book table</button>
+      </form>
+    </section>
+
+    <section aria-labelledby="menu-heading">
+      <h2 id="menu-heading">Menu</h2>
+
+      <table>
+        <caption>Habesha Eatery — sample menu (prices in ETB)</caption>
+        <thead>
+          <tr>
+            <th scope="col">Dish</th>
+            <th scope="col">Description</th>
+            <th scope="col">Price (ETB)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Doro Wat</th>
+            <td>Spiced chicken stew with berbere and boiled egg</td>
+            <td>450</td>
+          </tr>
+          <tr>
+            <th scope="row">Tibs</th>
+            <td>Sautéed beef with onions, peppers and rosemary</td>
+            <td>420</td>
+          </tr>
+          <tr>
+            <th scope="row">Shiro</th>
+            <td>Spiced chickpea stew, served with injera</td>
+            <td>280</td>
+          </tr>
+          <tr>
+            <th scope="row">Kitfo</th>
+            <td>Minced beef seasoned with mitmita and niter kibbeh</td>
+            <td>480</td>
+          </tr>
+          <tr>
+            <th scope="row">Vegetable Combo</th>
+            <td>Selection of shiro, gomen, misir wot and salad</td>
+            <td>350</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section aria-labelledby="find-us-heading">
+      <h2 id="find-us-heading">Find Us</h2>
+
+      <img src="images.jpeg"
+           alt="A traditional Ethiopian mesob table set with injera and several colorful stews"
+           loading="lazy">
+
+      <iframe
+        title="Map showing Habesha Eatery location in Bole, Addis Ababa"
+        src="https://www.google.com/maps?q=Bole,Addis+Ababa&output=embed"
+        width="100%" height="300" loading="lazy">
+      </iframe>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Habesha Eatery · Bole, Addis Ababa</p>
+  </footer>
+
+</body>
+</html>

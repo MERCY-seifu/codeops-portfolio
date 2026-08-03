@@ -1,0 +1,31 @@
+h1{
+    color: rgb(209, 41, 195);
+}
+
+/*
+selectors
+Element selector--- Tag name
+class selector---.classname
+id selector---#
+*/
+
+#greet{
+    color:blanchedalmond
+}
+
+#greet1{
+    color:hsl(212, 68%, 33%) 
+}
+
+div{
+    
+    color: #1B4D8E;  
+}
+
+
+div{
+    
+    color:rgb(27, 77, 142)!important; 
+}
+
+     

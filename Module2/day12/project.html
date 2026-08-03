@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reservations — Habesha Eatery, Bole</title>
+  <meta name="description" content="Reserve a table at Habesha Eatery in Bole, Addis Ababa, and browse our menu.">
+</head>
+<body>
+
+  <header>
+    <h1>Habesha Eatery</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Reservations</a> ·
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main>
+
+    <section aria-labelledby="reserve-heading">
+      <h2 id="reserve-heading">Reserve a Table</h2>
+
+      <!-- Using method="post" because a reservation creates a new record on the
+           server rather than just retrieving data, and we don't want the
+           submitted details (name, phone, party size) appended to the URL. -->
+      <form action="/reserve" method="post">
+
+        <label for="name">Full name</label>
+        <input id="name" name="name" type="text" required>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required>
+
+        <label for="phone">Phone</label>
+        <input id="phone" name="phone" type="tel"
+               pattern="\+251[0-9]{9}"
+               placeholder="+251912345678"
+               title="Format: +251 followed by 9 digits"
+               required>
+
+        <label for="date">Date</label>
+        <input id="date" name="date" type="date" required>
+
+        <label for="party-size">Party size</label>
+        <input id="party-size" name="party-size" type="number" min="1" max="20" required>
+
+        <button type="submit">Book table</button>
+      </form>
+    </section>
+
+    <section aria-labelledby="menu-heading">
+      <h2 id="menu-heading">Menu</h2>
+
+      <table>
+        <caption>Habesha Eatery — sample menu (prices in ETB)</caption>
+        <thead>
+          <tr>
+            <th scope="col">Dish</th>
+            <th scope="col">Description</th>
+            <th scope="col">Price (ETB)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Doro Wat</th>
+            <td>Spiced chicken stew with berbere and boiled egg</td>
+            <td>450</td>
+          </tr>
+          <tr>
+            <th scope="row">Tibs</th>
+            <td>Sautéed beef with onions, peppers and rosemary</td>
+            <td>420</td>
+          </tr>
+          <tr>
+            <th scope="row">Shiro</th>
+            <td>Spiced chickpea stew, served with injera</td>
+            <td>280</td>
+          </tr>
+          <tr>
+            <th scope="row">Kitfo</th>
+            <td>Minced beef seasoned with mitmita and niter kibbeh</td>
+            <td>480</td>
+          </tr>
+          <tr>
+            <th scope="row">Vegetable Combo</th>
+            <td>Selection of shiro, gomen, misir wot and salad</td>
+            <td>350</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section aria-labelledby="find-us-heading">
+      <h2 id="find-us-heading">Find Us</h2>
+
+      <figure>
+        <img src="img3.jpeg" alt="A traditional Ethiopian mesob table set with injera and several colorful stews">
+        <figcaption>A classic Habesha spread, served the traditional way on a mesob.</figcaption>
+      </figure>
+
+      <iframe
+        title="Map showing Habesha Eatery location in Bole, Addis Ababa"
+        src="https://www.google.com/maps?q=Bole,Addis+Ababa&output=embed"
+        width="100%" height="300" loading="lazy">
+      </iframe>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Habesha Eatery · Bole, Addis Ababa</p>
+  </footer>
+
+</body>
+</html>

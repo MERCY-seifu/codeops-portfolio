@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!-- Exercise 5: complete, valid <head> below — unique title, meta description, charset, viewport -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Day 12 Exercises — Ethio Telecom & Ethiopian Airlines</title>
+  <meta name="description" content="Day 12 CodeOps exercises: an Ethio Telecom registration form, an Ethiopian Airlines flight table, an accessible media block, and accessibility fixes.">
+</head>
+<body>
+
+  <header>
+    <h1>Day 12 Exercises</h1>
+  </header>
+
+  <main>
+
+    <!-- ===================== Exercise 1 ===================== -->
+    <section aria-labelledby="ex1-heading">
+      <h2 id="ex1-heading">1. Ethio Telecom Registration Form</h2>
+
+      <form action="/register" method="post">
+
+        <label for="reg-name">Full name</label>
+        <input id="reg-name" name="name" type="text" required>
+
+        <label for="reg-email">Email</label>
+        <input id="reg-email" name="email" type="email" required>
+
+        <label for="reg-phone">Phone</label>
+        <input id="reg-phone" name="phone" type="tel"
+               pattern="\+251[0-9]{9}"
+               placeholder="+251912345678"
+               title="Format: +251 followed by 9 digits"
+               required>
+
+        <label for="reg-branch">Branch</label>
+        <select id="reg-branch" name="branch" required>
+          <option value="">Choose a branch</option>
+          <option value="bole">Bole</option>
+          <option value="kazanchis">Kazanchis</option>
+          <option value="piassa">Piassa</option>
+        </select>
+
+        <button type="submit">Register</button>
+      </form>
+    </section>
+
+    <!-- ===================== Exercise 2 ===================== -->
+    <section aria-labelledby="ex2-heading">
+      <h2 id="ex2-heading">2. Ethiopian Airlines Flight Table</h2>
+
+      <table>
+        <caption>Ethiopian Airlines — sample flights</caption>
+        <thead>
+          <tr>
+            <th scope="col">Flight</th>
+            <th scope="col">From</th>
+            <th scope="col">To</th>
+            <th scope="col">Departs</th>
+            <th scope="col">Price ETB</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>ET302</td>
+            <td>Addis Ababa</td>
+            <td>Nairobi</td>
+            <td>08:15</td>
+            <td>12,400</td>
+          </tr>
+          <tr>
+            <td>ET500</td>
+            <td>Addis Ababa</td>
+            <td>Washington Dulles</td>
+            <td>23:55</td>
+            <td>48,900</td>
+          </tr>
+          <tr>
+            <td>ET608</td>
+            <td>Addis Ababa</td>
+            <td>Lagos</td>
+            <td>13:40</td>
+            <td>19,200</td>
+          </tr>
+          <tr>
+            <td>ET700</td>
+            <td>Addis Ababa</td>
+            <td>Dubai</td>
+            <td>02:10</td>
+            <td>21,700</td>
+          </tr>
+          <tr>
+            <td>ET800</td>
+            <td>Addis Ababa</td>
+            <td>London Heathrow</td>
+            <td>21:30</td>
+            <td>39,500</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ===================== Exercise 3 ===================== -->
+    <section aria-labelledby="ex3-heading">
+      <h2 id="ex3-heading">3. Media Block</h2>
+
+      <figure>
+        <img src="lalibela.jpg" alt="Rock-hewn Church of Saint George in Lalibela, carved in the shape of a cross">
+        <figcaption>The Church of Saint George, one of Lalibela's eleven rock-hewn churches.</figcaption>
+      </figure>
+
+      <iframe
+        title="Map showing the location of Lalibela, Ethiopia"
+        src="https://www.google.com/maps?q=Lalibela,Ethiopia&output=embed"
+        width="100%" height="300" loading="lazy">
+      </iframe>
+    </section>
+
+    <!-- ===================== Exercise 4 ===================== -->
+    <section aria-labelledby="ex4-heading">
+      <h2 id="ex4-heading">4. Accessibility Fixes</h2>
+      <h3>Fix A — div used as a button</h3>
+      <button type="button" onclick="submitOrder()">Place order</button>
+      <h3>Fix B — unlabelled input</h3>
+      <label for="search">Search</label>
+      <input id="search" name="search" type="text" placeholder="e.g. teff, berbere">
+      <h3>Fix C — image with no alt</h3>
+      <img src="img4.jpg" alt="A small bowl of dark red berbere spice blend">
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Day 12 exercises — CodeOps, Module 2</p>
+  </footer>
+
+</body>
+</html>
