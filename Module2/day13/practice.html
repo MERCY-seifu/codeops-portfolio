@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Day 13 Exercises — CodeOps</title>
+<link rel="stylesheet" href="practice.css">
+</head>
+<body>
+
+  <h1>Day 13 Exercises — CodeOps</h1>
+  <button class="btn-custom">Order Now</button>
+  <div class="explain">
+    The <code>button</code> element is a native HTML element that can be styled with CSS. Here, we have a button with the class <code>btn-custom</code>, which allows us to apply custom styles to it. You can change its background color, text color, padding, border radius, and more using CSS.
+  </div>
+
+
+  <h2>box-sizing: content-box vs border-box</h2>
+  <div class="card-content-box">
+    content-box: declared width 300px, but padding + border are
+    added on top, so it actually renders at 352px wide.
+  </div>
+  <div class="card-border-box">
+    border-box: padding + border are included inside the 300px,
+    so it renders at exactly 300px wide.
+  </div>
+
+  <h2>Specificity</h2>
+  <p id="highlight" class="note">
+    This paragraph is targeted by an element rule (p), a class
+    rule (.note), and an ID rule (#highlight) — all setting color.
+  </p>
+  <div class="explain">
+    <strong>Winner: the ID rule (crimson).</strong><br>
+    Specificity scores are counted as (ID, class, element):<br>
+    <code>p</code> → (0,0,1) &nbsp;·&nbsp;
+    <code>.note</code> → (0,1,0) &nbsp;·&nbsp;
+    <code>#highlight</code> → (1,0,0)<br>
+    Comparing left to right, any ID beats any number of classes,
+    and any class beats any number of element selectors — so
+    <code>#highlight</code> wins regardless of the order the rules
+    are written in.
+  </div>
+
+ <h2>Ethiopian Airlines Schedule Table</h2>
+  <table class="schedule-table">
+    <thead>
+      <tr>
+        <th>Flight</th>
+        <th>From</th>
+        <th>To</th>
+        <th>Departure</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>ET 302</td>
+        <td>Addis Ababa</td>
+        <td>Nairobi</td>
+        <td>08:10</td>
+        <td>On Time</td>
+      </tr>
+      <tr>
+        <td>ET 500</td>
+        <td>Addis Ababa</td>
+        <td>Washington D.C.</td>
+        <td>23:55</td>
+        <td>Delayed</td>
+      </tr>
+      <tr>
+        <td>ET 608</td>
+        <td>Addis Ababa</td>
+        <td>Lagos</td>
+        <td>11:30</td>
+        <td>On Time</td>
+      </tr>
+      <tr>
+        <td>ET 700</td>
+        <td>Addis Ababa</td>
+        <td>Dubai</td>
+        <td>02:15</td>
+        <td>Boarding</td>
+      </tr>
+      <tr>
+        <td>ET 800</td>
+        <td>Addis Ababa</td>
+        <td>London</td>
+        <td>21:40</td>
+        <td>On Time</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Hex → RGB → HSL Palette + Hover Shades</h2>
+  <div class="swatch-row">
+    <div class="swatch swatch-green">
+      #0a5c36<br>rgb(10,92,54)<br>hsl(153,80%,20%)
+    </div>
+    <div class="swatch swatch-amber">
+      #f59e0b<br>rgb(245,158,11)<br>hsl(38,92%,50%)
+    </div>
+    <div class="swatch swatch-blue">
+      #1d4ed8<br>rgb(29,78,216)<br>hsl(224,76%,48%)
+    </div>
+  </div>
+  <div class="explain">
+    Hover over each swatch — only the <strong>lightness</strong> value
+    in the <code>hsl()</code> changes for the hover state (hue and
+    saturation stay identical), which is why the hover color still
+    feels like "the same color, just lighter."
+  </div>
+
+</body>
+</html>

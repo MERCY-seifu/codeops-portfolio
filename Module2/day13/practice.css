@@ -1,0 +1,135 @@
+:root {
+  --color-primary: #1d4ed8;   
+  --color-accent: #f59e0b;   
+  --space-md: 16px;
+  --font-stack: 'Segoe UI', Tahoma, Verdana, sans-serif;
+}
+
+.btn-custom {
+  font-family: var(--font-stack);
+  background-color: var(--color-primary);
+  color: white;
+  padding: var(--space-md) calc(var(--space-md) * 1.5);
+  border: 2px solid var(--color-accent);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn-custom:hover {
+  background-color: var(--color-accent);
+  border-color: var(--color-primary);
+}
+
+.card-content-box {
+  box-sizing: content-box; /* default */
+  width: 300px;
+  padding: 24px;
+  border: 2px solid #333;
+  background: #f3f4f6;
+  margin-bottom: 8px;
+}
+
+.card-border-box {
+  box-sizing: border-box; 
+  width: 300px;
+  padding: 24px;
+  border: 2px solid #333;
+  background: #dbeafe;
+}
+
+
+p {
+  color: rgb(125, 197, 125);       
+}
+.note {
+  color: rgb(202, 153, 62);       
+}
+#highlight {
+  color: rgb(228, 38, 76);     
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  margin-top: 8px;
+}
+
+.schedule-table th {
+  background-color: #0a5c36; 
+  color: white;
+  text-align: left;
+  padding: 12px 16px;
+}
+
+.schedule-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #ddd;
+}
+
+.schedule-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.schedule-table tr:hover {
+  background-color: #ffe9c7;
+}
+  
+.swatch-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.swatch {
+  width: 140px;
+  height: 90px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: monospace;
+  font-size: 0.8rem;
+  text-align: center;
+  transition: background-color 0.2s ease;
+}
+
+.swatch-green   { background-color: hsl(153, 80%, 20%); }
+.swatch-green:hover   { background-color: hsl(153, 80%, 35%); }
+
+.swatch-amber   { background-color: hsl(38, 92%, 50%); }
+.swatch-amber:hover   { background-color: hsl(38, 92%, 65%); }
+
+.swatch-blue    { background-color: hsl(224, 76%, 48%); }
+.swatch-blue:hover    { background-color: hsl(224, 76%, 63%); }
+
+body {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+  line-height: 1.5;
+  color: #1f2937;
+}
+h1 { font-size: 1.5rem; }
+h2 {
+  margin-top: 48px;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 6px;
+}
+code {
+  background: #f3f4f6;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+.explain {
+  background: #f9fafb;
+  border-left: 4px solid #9ca3af;
+  padding: 10px 14px;
+  margin-top: 10px;
+  font-size: 0.95rem;
+}
