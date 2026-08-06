@@ -99,7 +99,8 @@ body {
 }
 
 .card__details li {
-  padding: var(--space-xs) 0; 
+  font-size: 0.9rem;
+  padding: var(--space-xs) 0;
   border-bottom: 1px dashed var(--border-color);
 }
 
@@ -108,6 +109,8 @@ body {
 }
 
 .card__details strong {
+  font-size: 0.9rem;
+  font-weight: 700;
   color: var(--brand);
   margin-right: var(--space-xs);
 }
