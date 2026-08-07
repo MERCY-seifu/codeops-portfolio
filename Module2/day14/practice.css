@@ -1,0 +1,298 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --accent: #3a6df0;
+  --ink: #222;
+  --ink-muted: #666;
+  --bg: #f5f6f8;
+  --card-bg: #ffffff;
+  --border: #e3e5e9;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--ink);
+}
+
+/* ---------- Page shell: sidebar + content ---------- */
+
+.shell {
+  display: flex;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.sidenav {
+  position: sticky;
+  top: 0;
+  flex: 0 0 200px;
+  height: 100vh;
+  padding: 32px 20px;
+  background-color: var(--ink);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sidenav__title {
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin: 0 0 16px;
+  letter-spacing: 0.02em;
+}
+
+.sidenav a {
+  color: #cfd3db;
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 8px 10px;
+  border-radius: 6px;
+}
+
+.sidenav a:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: white;
+}
+
+.content {
+  flex: 1;
+  padding: 40px 32px 80px;
+  min-width: 0;
+}
+
+.page-title {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.page-subtitle {
+  margin: 4px 0 32px;
+  color: var(--ink-muted);
+  font-size: 0.95rem;
+}
+
+.exercise {
+  max-width: 900px;
+  margin: 0 0 28px;
+  padding: 24px 28px 32px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  scroll-margin-top: 20px;
+}
+
+.ex-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #eee;
+  font-size: 1.1rem;
+}
+
+.ex-title .num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: var(--accent);
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+@media (max-width: 700px) {
+  .shell {
+    flex-direction: column;
+  }
+
+  .sidenav {
+    position: static;
+    height: auto;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 16px;
+  }
+
+  .sidenav__title {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+}
+
+/* ---------- Exercise 1: Navbar ---------- */
+
+.ex1 .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+  background-color: #222;
+  border-radius: 8px;
+}
+
+.ex1 .logo {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.ex1 .nav-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.ex1 .nav-right a {
+  color: white;
+  text-decoration: none;
+}
+
+.ex1 .nav-right a:hover {
+  color: #ffcc66;
+}
+
+.ex1 .nav-btn {
+  padding: 8px 16px;
+  background-color: #ffcc66;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* ---------- Exercise 2: Cards row ---------- */
+
+.ex2 .card-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.ex2 .card {
+  flex: 1;
+  min-width: 180px;
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 40px 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* ---------- Exercise 3: Gallery ---------- */
+
+.ex3 .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.ex3 .gallery img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  border-radius: 4px;
+}
+
+/* ---------- Exercise 4: Page layout ---------- */
+
+.ex4 .layout {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+  min-height: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.ex4 .header {
+  grid-area: header;
+  background-color: #333;
+  color: white;
+  padding: 16px;
+  border-radius: 8px 8px 0 0;
+}
+
+.ex4 .sidebar {
+  grid-area: sidebar;
+  background-color: #eee;
+  padding: 16px;
+}
+
+.ex4 .main {
+  grid-area: main;
+  padding: 16px;
+}
+
+.ex4 .footer {
+  grid-area: footer;
+  background-color: #333;
+  color: white;
+  padding: 16px;
+  text-align: center;
+  border-radius: 0 0 8px 8px;
+}
+
+@media (max-width: 700px) {
+  .ex4 .layout {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "main"
+      "sidebar"
+      "footer";
+  }
+}
+
+/* ---------- Exercise 5: Product badge ---------- */
+
+.ex5 .product-card {
+  position: relative;
+  width: 260px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+  background-color: white;
+}
+
+.ex5 .product-card img {
+  width: 100%;
+  border-radius: 6px;
+  display: block;
+}
+
+.ex5 .badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 70px;
+  height: 70px;
+  background-color: #e63946;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: bold;
+}

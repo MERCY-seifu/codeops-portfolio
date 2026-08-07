@@ -1,0 +1,289 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #222;
+  background-color: #f4f5f7;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer  footer";
+  min-height: 100vh;
+}
+
+
+
+.topbar {
+  grid-area: header;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 28px;
+  background-color: #5c1a1a;
+  color: white;
+}
+
+.topbar__logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.topbar__right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+
+.bell {
+  position: relative;
+  font-size: 1.1rem;
+}
+
+.bell__dot {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 9px;
+  height: 9px;
+  background-color: #ff4d4d;
+  border-radius: 50%;
+  border: 2px solid #5c1a1a;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.user__avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #f4c542;
+  color: #5c1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.user__name {
+  font-size: 0.9rem;
+}
+
+
+.sidebar {
+  grid-area: sidebar;
+  position: sticky;
+  top: 58px; 
+  align-self: start;
+  background-color: #ffffff;
+  border-right: 1px solid #e2e4e8;
+  padding: 20px 0;
+}
+
+.sidebar__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sidebar__nav a {
+  padding: 10px 24px;
+  font-size: 0.92rem;
+  color: #444;
+}
+
+.sidebar__nav a:hover {
+  background-color: #f4f5f7;
+}
+
+.sidebar__nav a.active {
+  background-color: #fdf1e7;
+  color: #5c1a1a;
+  font-weight: bold;
+  border-left: 3px solid #5c1a1a;
+}
+
+
+.main {
+  grid-area: main;
+  padding: 28px 32px 60px;
+}
+
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.toolbar__title {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.btn-primary {
+  padding: 10px 20px;
+  background-color: #5c1a1a;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #742323;
+}
+
+.stat-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 36px;
+}
+
+.stat-card {
+  flex: 1;
+  min-width: 200px;
+  background-color: white;
+  border: 1px solid #e2e4e8;
+  border-radius: 8px;
+  padding: 18px 20px;
+}
+
+.stat-card__label {
+  margin: 0 0 8px;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.stat-card__value {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.section-title {
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+}
+
+.tx-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.tx-card {
+  position: relative;
+  background-color: white;
+  border: 1px solid #e2e4e8;
+  border-radius: 8px;
+  padding: 16px 18px;
+}
+
+.tx-card__badge {
+  position: absolute;
+  top: -8px;
+  right: 12px;
+  background-color: #f4c542;
+  color: #5c1a1a;
+  font-size: 0.65rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 999px;
+}
+
+.tx-card__title {
+  margin: 0 0 6px;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+.tx-card__amount {
+  margin: 0 0 6px;
+  color: #c0392b;
+  font-weight: bold;
+}
+
+.tx-card__amount--positive {
+  color: #1e8449;
+}
+
+.tx-card__date {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+
+.footer {
+  grid-area: footer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 28px;
+  background-color: #5c1a1a;
+  color: white;
+  font-size: 0.85rem;
+}
+
+.footer__links {
+  display: flex;
+  gap: 16px;
+}
+
+
+
+@media (max-width: 700px) {
+  .app {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "sidebar"
+      "main"
+      "footer";
+  }
+
+  .sidebar {
+    position: static;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid #e2e4e8;
+  }
+
+  .sidebar__nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0 12px;
+  }
+
+  .toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
