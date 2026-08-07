@@ -1,0 +1,36 @@
+.container{
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    width: 90vw;
+    margin-inline: auto;
+    background-color: lightgray;
+    gap: 20px;
+    padding: 20px;
+}
+
+
+
+.box {
+    flex: 1 1 250px;
+    max-width: 280px;
+    min-height: 150px;
+    height: auto;
+    background-color: lightblue;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box {
+    max-width: 90%;
+  }
+}

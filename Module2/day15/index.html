@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Habesha Eatery — Menu, Reservations & Location</title>
+<meta name="description" content="Reserve a table at Habesha Eatery in Bole, Addis Ababa, browse our menu, and find us on the map.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="page">
+
+    <header class="navbar">
+      <a href="#" class="navbar__logo">Habesha Eatery</a>
+      <nav class="navbar__links">
+        <a href="#menu">Menu</a>
+        <a href="#reserve">Reserve</a>
+        <a href="#find-us">Find Us</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1 class="hero__title">Habesha Eatery</h1>
+        <p class="hero__subtitle">Authentic Ethiopian flavors in the heart of Bole, Addis Ababa</p>
+      </section>
+
+      
+      <section class="menu-section" id="menu">
+        <h2 class="menu-section__title">Our Menu</h2>
+
+        <div class="menu-grid">
+
+          <article class="menu-card">
+            <span class="menu-card__badge">Popular</span>
+            <img src="doro.png" alt="Doro Wat spiced chicken stew" class="menu-card__image">
+            <div class="menu-card__content">
+              <h3 class="menu-card__name">Doro Wat</h3>
+              <p class="menu-card__desc">Spiced chicken stew with berbere and boiled egg.</p>
+              <p class="menu-card__price">450</p>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <img src="tibs.png" alt="Tibs sauteed beef" class="menu-card__image">
+            <div class="menu-card__content">
+              <h3 class="menu-card__name">Tibs</h3>
+              <p class="menu-card__desc">Sautéed beef with onions, peppers, and rosemary.</p>
+              <p class="menu-card__price">420</p>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <img src="shero.png" alt="Shiro chickpea stew" class="menu-card__image">
+            <div class="menu-card__content">
+              <h3 class="menu-card__name">Shiro</h3>
+              <p class="menu-card__desc">Spiced chickpea stew, served with injera.</p>
+              <p class="menu-card__price">280</p>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <span class="menu-card__badge">Popular</span>
+            <img src="ketfo.png" alt="Kitfo minced beef" class="menu-card__image">
+            <div class="menu-card__content">
+              <h3 class="menu-card__name">Kitfo</h3>
+              <p class="menu-card__desc">Minced beef seasoned with mitmita and niter kibbeh.</p>
+              <p class="menu-card__price">480</p>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <img src="vege.png" alt="Vegetable combo platter" class="menu-card__image">
+            <div class="menu-card__content">
+              <h3 class="menu-card__name">Vegetable Combo</h3>
+              <p class="menu-card__desc">Selection of shiro, gomen, misir wot, and salad.</p>
+              <p class="menu-card__price">350</p>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      
+      <section class="reserve-section" id="reserve">
+        <h2 class="section-title">Reserve a Table</h2>
+
+        <form class="reserve-form" action="/reserve" method="post">
+
+          <div class="form-group">
+            <label for="name">Full name</label>
+            <input id="name" name="name" type="text" required>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel"
+                   pattern="09[0-9]{8}"
+                   placeholder="0912345678"
+                   title="Format: 09 followed by 8 digits"
+                   required>
+          </div>
+
+          <div class="form-group">
+            <label for="guests">Guests</label>
+            <input id="guests" name="guests" type="number" min="1" max="20" required>
+          </div>
+
+          <div class="form-group">
+            <label for="date">Date</label>
+            <input id="date" name="date" type="date" required>
+          </div>
+
+          <button type="submit" class="btn">Book table</button>
+        </form>
+      </section>
+      
+      <section class="find-us-section" id="find-us">
+        <h2 class="section-title">Find Us</h2>
+
+        <div class="find-us-content">
+          <div class="find-us__details">
+            <p><strong>Location:</strong> Bole Road, near Edna Mall, Addis Ababa</p>
+            <p><strong>Hours:</strong> Mon–Sun, 7:00 AM – 9:00 PM</p>
+            <p><strong>Phone:</strong> +251 91 234 5678</p>
+          </div>
+
+          <iframe
+            class="find-us__map"
+            title="Map showing Habesha Eatery location in Bole, Addis Ababa"
+            src="https://www.google.com/maps?q=Bole,Addis+Ababa&output=embed"
+            loading="lazy">
+          </iframe>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <p>Habesha Eatery · Bole, Addis Ababa</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>
