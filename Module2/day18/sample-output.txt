@@ -1,0 +1,18 @@
+=== TeleBirr Transaction Report ===
+
+Receipts:
+ #1 Almaz      -250 ETB (debit)
+ #2 Dawit      +600 ETB (credit)
+ #3 Tigist     -180 ETB (debit)
+ #4 Bereket    +1200 ETB (credit)
+ #5 Hana       -90 ETB (debit)
+ #6 Samuel     +450 ETB (credit)
+
+Totals:
+  Total credits: 2250 ETB
+  Total debits:  520 ETB
+  Net balance:   1730 ETB
+
+Correction example (spread, no mutation):
+  original: { id: 3, customer: 'Tigist', amount: 180, type: 'debit' }
+  corrected: { id: 3, customer: 'Tigist', amount: 200, type: 'debit' }
