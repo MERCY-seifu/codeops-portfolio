@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Birr Watch — Convert to ETB</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body class="min-h-screen bg-[#eef0ee] flex items-center justify-center p-10 font-sans">
+
+<div class="w-[360px] min-h-[640px] bg-white rounded-[28px] shadow-[0_20px_50px_rgba(11,46,34,0.15),0_2px_6px_rgba(11,46,34,0.08)] overflow-hidden flex flex-col">
+
+  <!-- Header -->
+  <div class="flex items-center justify-between px-[18px] pt-4 pb-2.5">
+    <div class="flex items-center gap-2 font-bold text-[17px] text-ink-900">
+      <span class="w-[22px] h-[22px] inline-flex items-center justify-center text-amber-600 text-lg">◉</span>
+      <span>Birr Watch</span>
+    </div>
+    <span class="text-ink-500 text-xl tracking-[2px] cursor-pointer">⋮</span>
+  </div>
+
+  <!-- Title block -->
+  <div class="px-[18px] pt-2 pb-[18px]">
+    <h1 class="text-[26px] font-extrabold text-brand-900 mb-2">Convert to ETB</h1>
+    <p class="text-[13.5px] leading-relaxed text-ink-500">
+      Real-time precision exchange rates. Ensure your calculations are based on the latest market data.
+    </p>
+  </div>
+
+  <!-- Card -->
+  <div class="mx-[18px] mb-[18px] bg-white border border-gray-200 rounded-2xl p-4">
+    <div class="text-[11px] font-bold tracking-wider text-ink-400 mb-2">AMOUNT TO CONVERT</div>
+
+    <div class="flex items-center gap-2.5 border border-gray-200 rounded-xl px-3.5 py-2.5">
+      <span class="text-lg font-semibold text-ink-500">$</span>
+      <input
+        type="text"
+        value="45"
+        inputmode="decimal"
+        class="flex-1 w-full border-none outline-none bg-transparent text-[22px] font-bold text-ink-900"
+      />
+      <div class="flex items-center gap-1 bg-gray-100 rounded-full px-2.5 py-1.5 text-[13px] font-bold text-ink-700 cursor-pointer whitespace-nowrap">
+        USD <span class="text-[10px] text-ink-400">▾</span>
+      </div>
+    </div>
+
+    <div class="flex gap-2 mt-3 mb-3.5">
+      <button class="flex-1 border border-gray-200 bg-gray-100 hover:bg-gray-200 rounded-[10px] py-2 text-[12.5px] font-semibold text-ink-700">+$10</button>
+      <button class="flex-1 border border-gray-200 bg-gray-100 hover:bg-gray-200 rounded-[10px] py-2 text-[12.5px] font-semibold text-ink-700">+$50</button>
+      <button class="flex-1 border border-gray-200 bg-gray-100 hover:bg-gray-200 rounded-[10px] py-2 text-[12.5px] font-semibold text-ink-700">+$100</button>
+      <button class="flex-1 border border-gray-200 bg-gray-100 hover:bg-gray-200 rounded-[10px] py-2 text-[12.5px] font-semibold text-ink-700">+$1k</button>
+    </div>
+
+    <button class="w-full border-none bg-brand-900 hover:bg-brand-800 text-white text-[14.5px] font-bold py-3.5 rounded-xl flex items-center justify-center gap-2">
+      <span class="text-[15px]">⟳</span> Calculate Rate
+    </button>
+  </div>
+
+  <!-- Status line -->
+  <div class="flex items-center gap-1.5 px-[18px] pb-4 text-xs text-ink-500">
+    <span class="w-[7px] h-[7px] rounded-full bg-[#2e9e6c] inline-block"></span>
+    <span>Market Data Live</span>
+    <span class="text-ink-400">•</span>
+    <span>Last updated just now</span>
+  </div>
+
+  <!-- Watchlist section header -->
+  <div class="flex items-center justify-between px-[18px] pb-2.5">
+    <h2 class="text-[16.5px] font-extrabold text-ink-900 flex items-center gap-2">📈 Watch List</h2>
+    <span class="text-ink-400 text-base cursor-pointer">⚙</span>
+  </div>
+
+  <!-- Table card -->
+  <div class="mx-[18px] mb-[18px] border border-gray-200 rounded-2xl overflow-hidden flex-1 flex flex-col">
+    <div class="grid grid-cols-3 px-4 py-3 bg-gray-50 border-b border-gray-200 text-[10.5px] font-bold tracking-wide text-ink-400">
+      <span>PAIR</span>
+      <span class="text-center">TREND (24H)</span>
+      <span class="text-right">RATE (ETB)</span>
+    </div>
+
+    <div class="flex-1 flex flex-col items-center justify-center text-center px-6 py-8 gap-2.5">
+      <div class="w-[38px] h-[38px] rounded-[10px] bg-gray-100 flex items-center justify-center text-ink-400 text-base">🔖</div>
+      <div class="font-bold text-[13.5px] text-ink-900">No saved conversions yet</div>
+      <div class="text-[12.5px] leading-relaxed text-ink-500">
+        <a href="#" class="text-amber-600 font-bold no-underline">Calculate a rate and click "Save"</a> to add it here for quick reference.
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom nav -->
+  <div class="flex border-t border-gray-200 px-3 pt-2.5 pb-3.5 gap-1.5">
+    <div class="flex-1 flex flex-col items-center gap-1 py-2 px-1 rounded-xl text-[11px] font-bold cursor-pointer bg-brand-100 text-brand-900">
+      <span class="text-base">$</span>
+      Converter
+    </div>
+    <div class="flex-1 flex flex-col items-center gap-1 py-2 px-1 rounded-xl text-[11px] font-bold cursor-pointer text-ink-500">
+      <span class="text-base">📉</span>
+      Trends
+    </div>
+    <div class="flex-1 flex flex-col items-center gap-1 py-2 px-1 rounded-xl text-[11px] font-bold cursor-pointer text-ink-500">
+      <span class="text-base">👁</span>
+      Watchlist
+    </div>
+  </div>
+
+</div>
+
+<script src = "./app.js"/>
+</body>
+</html>
