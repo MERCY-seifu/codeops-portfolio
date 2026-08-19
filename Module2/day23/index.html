@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Addis Eats — Order Ethiopian food in Bole</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="brand">
+      <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
+        <path d="M12 20c0-3 2-5 5-5h6c3 0 5 2 5 5v10c0 5-4 9-9 9s-9-4-9-9v-1" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M28 22h4c2 0 3 1.5 3 3.5S34 29 32 29h-4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M15 12c0-1.5 1.5-2 1.5-3.5S15 6 15 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        <path d="M20 12c0-1.5 1.5-2 1.5-3.5S20 6 20 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+      <div class="brand-text">
+        <p class="eyebrow">Bole &middot; Addis Ababa</p>
+        <h1>Addis Eats</h1>
+      </div>
+    </div>
+
+    <div class="search-wrap">
+      <label class="visually-hidden" for="search">Search dishes</label>
+      <input type="search" id="search" placeholder="Search doro wat, shiro, tej…" autocomplete="off" />
+    </div>
+  </header>
+
+  <nav class="category-bar" aria-label="Filter by category">
+    <button class="chip" aria-pressed="true">All</button>
+    <button class="chip" aria-pressed="false">Main</button>
+    <button class="chip" aria-pressed="false">Vegetarian</button>
+    <button class="chip" aria-pressed="false">Sides</button>
+    <button class="chip" aria-pressed="false">Drinks</button>
+  </nav>
+
+  <main>
+
+    <section id="menu" class="menu-grid" aria-label="Menu">
+      <article class="dish">
+        <p class="cat-label">Main</p>
+        <h3>Doro Wat</h3>
+        <p class="desc">Slow-simmered chicken in berbere sauce, boiled egg, served with injera.</p>
+        <div class="dish-footer">
+          <div>
+            <span class="price">320 ETB</span>
+            <div class="spice-dots" aria-label="3 of 3 spice level">
+              <span class="on"></span><span class="on"></span><span class="on"></span>
+            </div>
+          </div>
+          <button class="btn add" type="button">Add</button>
+        </div>
+      </article>
+
+      <article class="dish">
+        <p class="cat-label">Vegetarian</p>
+        <h3>Shiro</h3>
+        <p class="desc">Spiced chickpea stew, smooth and rich, a daily staple.</p>
+        <div class="dish-footer">
+          <div>
+            <span class="price">160 ETB</span>
+            <div class="spice-dots" aria-label="1 of 3 spice level">
+              <span class="on"></span><span></span><span></span>
+            </div>
+          </div>
+          <button class="btn add" type="button">Add</button>
+        </div>
+      </article>
+    </section>
+
+    <aside id="cart" class="cart" aria-label="Your order">
+      <h2>Your order</h2>
+      <p class="cart-empty">Your cart is empty. Add a dish from the menu to start an order.</p>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <p>Addis Eats &middot; Bole Road, Addis Ababa &middot; Pay on delivery or TeleBirr</p>
+  </footer>
+
+</body>
+</html>
