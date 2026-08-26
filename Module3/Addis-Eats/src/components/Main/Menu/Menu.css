@@ -1,0 +1,28 @@
+.menu {
+  flex: 1;
+  display: grid;
+  gap: 16px;
+  padding: 16px;
+}
+
+.dish-card {
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.dish-name {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.dish-price {
+  margin: 0;
+  font-weight: 600;
+  color: #7a1f1f;
+}
