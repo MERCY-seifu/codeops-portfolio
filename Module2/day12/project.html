@@ -22,9 +22,6 @@
     <section aria-labelledby="reserve-heading">
       <h2 id="reserve-heading">Reserve a Table</h2>
 
-      <!-- Using method="post" because a reservation creates a new record on the
-           server rather than just retrieving data, and we don't want the
-           submitted details (name, phone, party size) appended to the URL. -->
       <form action="/reserve" method="post">
 
         <label for="name">Full name</label>

@@ -1,6 +1,3 @@
-/* ==========================================================
-   ROOT TOKENS
-========================================================== */
 :root {
   --brand: hsl(20, 55%, 30%);
   --brand-hover: hsl(20, 55%, 40%);
@@ -20,15 +17,13 @@
   --radius: 10px;
 }
 
-/* ==========================================================
-   GLOBAL RESET
-========================================================== */
+
 * {
   box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: smooth; /* smooth in-page navigation, no jumps */
+  scroll-behavior: smooth; 
 }
 
 body {
@@ -39,19 +34,14 @@ body {
   background-color: var(--bg-page);
 }
 
-/* ==========================================================
-   PAGE SKELETON — Grid, rows: auto / 1fr / auto
-   (navbar / main content / footer)
-========================================================== */
+
 .page {
   display: grid;
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
 }
 
-/* ==========================================================
-   NAVBAR — Flexbox, logo left, links right, sticky to top
-========================================================== */
+
 .navbar {
   position: sticky;
   top: 0;
@@ -90,9 +80,7 @@ body {
   color: var(--gold);
 }
 
-/* ==========================================================
-   HERO
-========================================================== */
+
 .hero {
   text-align: center;
   padding: var(--space-xl) var(--space-lg);
@@ -110,12 +98,10 @@ body {
   margin: 0;
 }
 
-/* ==========================================================
-   MENU SECTION
-========================================================== */
+
 .menu-section {
   padding: var(--space-lg) var(--space-xl) var(--space-xl);
-  scroll-margin-top: 80px; /* keeps section title clear of sticky navbar */
+  scroll-margin-top: 80px;
 }
 
 .menu-section__title {
@@ -125,17 +111,14 @@ body {
   margin: 0 0 var(--space-lg);
 }
 
-/* Auto-fit grid of menu cards */
+
 .menu-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: var(--space-lg);
 }
 
-/* ==========================================================
-   MENU CARD — Flexbox column, price pinned to bottom,
-   Popular badge pinned via relative + absolute
-========================================================== */
+
 .menu-card {
   position: relative;
   display: flex;
@@ -185,9 +168,8 @@ body {
   color: var(--ink-muted);
   line-height: 1.6;
   margin: 0 0 var(--space-md);
-  flex: 1; /* pushes price down regardless of description length */
+  flex: 1; 
 }
-
 .menu-card__price {
   font-size: 1.05rem;
   font-weight: 700;
@@ -202,7 +184,6 @@ body {
   font-size: 0.8rem;
 }
 
-/* "Popular" badge — pinned to card corner */
 .menu-card__badge {
   position: absolute;
   top: var(--space-sm);
@@ -217,9 +198,6 @@ body {
   border-radius: 999px;
 }
 
-/* ==========================================================
-   FOOTER
-========================================================== */
 .footer {
   text-align: center;
   padding: var(--space-lg);
@@ -228,9 +206,7 @@ body {
   font-size: 0.85rem;
 }
 
-/* ==========================================================
-   RESERVE SECTION
-========================================================== */
+
 .reserve-section {
   padding: var(--space-xl) var(--space-lg);
   max-width: 480px;
@@ -292,9 +268,6 @@ body {
   background-color: var(--brand-hover);
 }
 
-/* ==========================================================
-   FIND US SECTION
-========================================================== */
 .find-us-section {
   padding: var(--space-xl) var(--space-lg) 0;
   max-width: 1000px;
@@ -306,7 +279,7 @@ body {
   text-align: left;
 }
 
-/* Details (left) + small map (pushed to the right edge, aligned low near footer) */
+
 .find-us-content {
   display: flex;
   align-items: flex-end;
@@ -325,7 +298,7 @@ body {
 }
 
 .find-us__details {
-  order: 1; /* left */
+  order: 1; 
   flex: 1 1 220px;
   font-size: 0.95rem;
   line-height: 1.8;
@@ -336,14 +309,13 @@ body {
   margin-right: var(--space-xs);
 }
 
-/* Map is now inline in the row, pushed to the far right edge and small */
 .find-us__map {
-  order: 2; /* right */
+  order: 2; 
   flex: 0 0 auto;
   width: 160px;
   height: 120px;
   display: block;
-  margin: 0 0 0 auto; /* hugs the right edge of the section, regardless of text length */
+  margin: 0 0 0 auto; 
   border: 1px solid var(--border-color);
   border-radius: var(--radius);
 }

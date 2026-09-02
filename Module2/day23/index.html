@@ -4,22 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Addis Eats | Traditional Food Ordering</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
   <header>
     <div class="header-container">
+      <div class="eyebrow">Bole · Addis Ababa</div>
       <h1>Addis Eats</h1>
-      <p class="tagline">Authentic Ethiopian Cuisine delivered to your door</p>
+      <p class="tagline">Authentic Ethiopian cuisine, cooked to order and delivered to your door.</p>
       <input type="text" id="search" placeholder="Search dishes (e.g., Doro Wat, Shiro)..." aria-label="Search dishes">
     </div>
   </header>
 
   <main>
-   
     <section id="menu" aria-label="Menu">
-      
+      <div class="rounds"><span></span><span></span><span></span><span class="rlabel">Today's Menu</span></div>
+      <h2>The Full Table</h2>
+      <p class="menu-sub">Every dish comes with fresh injera on the side, unless noted.</p>
+
+      <div class="filters" id="filters"></div>
+      <div class="menu-grid" id="menu-grid"></div>
     </section>
 
     <aside id="cart" aria-label="Your order">
@@ -32,14 +38,19 @@
           <span>Total:</span>
           <strong id="cart-total">0 ETB</strong>
         </div>
-        <button id="checkout-btn" class="checkout-btn">Proceed to TeleBirr Checkout</button>
+        <button id="checkout-btn" class="checkout-btn" disabled>Proceed to TeleBirr Checkout</button>
       </div>
     </aside>
   </main>
 
   <footer>
-    <p>Bole, Addis Ababa</p>
+    <p>Addis Eats · Bole, Addis Ababa</p>
   </footer>
+
+  <!-- Checkout modal (built dynamically by app.js) -->
+  <div class="overlay" id="overlay">
+    <div class="modal" id="modal-content"></div>
+  </div>
 
   <script src="./app.js"></script>
 </body>

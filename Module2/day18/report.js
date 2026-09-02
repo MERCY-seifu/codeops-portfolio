@@ -3,6 +3,11 @@ export const totalByType = (txns, type) =>
     .filter((t) => t.type === type)
     .reduce((sum, { amount }) => sum + amount, 0);
 
+export const splitByType = (txns) => ({
+  credits: txns.filter((t) => t.type === "credit"),
+  debits: txns.filter((t) => t.type === "debit"),
+});
+
 export const formatReceipts = (txns) =>
   txns.map(({ id, customer, amount, type }) => {
     const sign = type === "credit" ? "+" : "-";

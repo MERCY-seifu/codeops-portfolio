@@ -1,5 +1,9 @@
-import { transactions } from "./transactions.js";
-import { totalByType, formatReceipts, correctAmount, netBalance } from "./report.js";
+import { transactions } from "./transactions.js";import {
+  totalByType,
+  formatReceipts,
+  correctAmount,
+  netBalance,
+} from "./report.js";
 
 console.log("=== TeleBirr Transaction Report ===\n");
 

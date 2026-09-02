@@ -1,11 +1,11 @@
 :root {
-  --gold: hsl(42, 71%, 57%);        /* accent / top border */
-  --gold-hover: hsla(42, 85%, 60%, 0.329);  /* hover state, lightness only */
-  --ink: hsl(20, 20%, 15%);         /* main text */
-  --ink-muted: hsl(20, 10%, 40%);   /* description text */
+  --gold: hsl(42, 71%, 57%);        
+  --gold-hover: hsla(42, 85%, 60%, 0.329); 
+  --ink: hsl(20, 20%, 15%);         
+  --ink-muted: hsl(20, 10%, 40%);   
   --card-bg: hsl(0, 0%, 100%);
-  --stripe: hsl(40, 60%, 96%);      /* zebra stripe */
-  --border-color: hsl(18, 16%, 52%); /* slightly darker than before */
+  --stripe: hsl(40, 60%, 96%);      
+  --border-color: hsl(18, 16%, 52%); 
 
   --space-xs: 8px;
   --space-sm: 12px;

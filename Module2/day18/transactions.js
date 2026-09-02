@@ -6,3 +6,4 @@ export const transactions = [
   { id: 5, customer: "Hana", amount: 90, type: "debit" },
   { id: 6, customer: "Samuel", amount: 450, type: "credit" },
 ];
+

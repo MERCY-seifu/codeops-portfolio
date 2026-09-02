@@ -129,6 +129,12 @@ main {
   margin-bottom: 1rem;
 }
 
+.dish-desc {
+  font-size: 0.85rem;
+  color: #64748B;
+  margin-bottom: 0.5rem;
+}
+
 .dish-footer {
   display: flex;
   justify-content: space-between;
@@ -263,9 +269,234 @@ button.rm {
   opacity: 0.9;
 }
 
+.checkout-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
 footer {
   text-align: center;
   padding: 2rem;
   color: #64748B;
   font-size: 0.85rem;
+}
+
+/* ============================================================
+   ADDED — category filters (this block is new, you didn't have it)
+   ============================================================ */
+
+.filters {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.25rem;
+  grid-column: 1 / -1;
+}
+
+.filter-btn {
+  background: var(--card-bg);
+  border: 1px solid var(--line);
+  color: #4B5563;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.filter-btn:hover {
+  border-color: var(--green);
+  color: var(--green);
+}
+
+.filter-btn.active {
+  background: var(--green);
+  border-color: var(--green);
+  color: white;
+}
+
+.no-results {
+  color: #64748B;
+  font-style: italic;
+  padding: 2rem 0;
+  grid-column: 1 / -1;
+}
+
+/* ============================================================
+   ADDED — checkout modal / customer info form (this block is new)
+   ============================================================ */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(11, 12, 12, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 50;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal {
+  background: var(--card-bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 2rem;
+  max-width: 440px;
+  width: 100%;
+  max-height: 88vh;
+  overflow-y: auto;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+  transform: translateY(10px);
+  transition: transform 0.2s ease;
+}
+
+.overlay.open .modal {
+  transform: translateY(0);
+}
+
+.modal h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0.4rem;
+  color: var(--ink);
+}
+
+.modal-sub {
+  color: #64748B;
+  font-size: 0.85rem;
+  margin-bottom: 1.5rem;
+}
+
+.field {
+  margin-bottom: 1rem;
+}
+
+.field label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #4B5563;
+  margin-bottom: 0.35rem;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 0.65rem 0.8rem;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  color: var(--ink);
+  font-size: 0.92rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: var(--green);
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 64px;
+}
+
+.field-error {
+  color: var(--spicy-red);
+  font-size: 0.75rem;
+  margin-top: 0.3rem;
+  display: none;
+}
+
+.field.invalid input,
+.field.invalid textarea {
+  border-color: var(--spicy-red);
+}
+
+.field.invalid .field-error {
+  display: block;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+}
+
+.btn-secondary {
+  flex: 1;
+  background: transparent;
+  border: 1px solid var(--line);
+  color: #4B5563;
+  padding: 0.75rem;
+  border-radius: 6px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  border-color: #94A3B8;
+}
+
+.btn-primary {
+  flex: 2;
+  background: var(--green);
+  border: none;
+  color: white;
+  padding: 0.75rem;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.88rem;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: var(--dark-green);
+}
+
+.confirm-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--dark-green);
+  color: var(--green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.order-line {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid var(--line);
+  color: #64748B;
+}
+
+.order-line span:last-child {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.order-id {
+  color: var(--green);
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin: 0.9rem 0 0.3rem;
 }

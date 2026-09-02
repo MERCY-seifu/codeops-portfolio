@@ -1,13 +1,13 @@
 # Day 15 — Responsive & Animated Menu
 
 ## What this is
-A menu section (`menu.html` + `menu.css`) that starts as a single column
+A menu section (`index.html` + `style.css`) that starts as a single column
 on mobile and expands to multiple columns on larger screens, with a
 tasteful hover transition on each dish card.
 
 ## Files
-- `menu.html` — markup for the menu section and dish cards
-- `menu.css` — mobile-first responsive styling with animated hover state
+- `index.html` — markup for the menu section and dish cards
+- `style.css` — mobile-first responsive styling with animated hover state
 
 ## Techniques used
 - **Viewport meta tag** — `<meta name="viewport" content="width=device-width, initial-scale=1.0">`
@@ -39,6 +39,6 @@ tasteful hover transition on each dish card.
       smoothly with no overlap or broken layout at any width
 
 ## How to view
-Open `menu.html` directly in a browser, or use a live server extension.
+Open `index.html` directly in a browser, or use a live server extension.
 Resize the window (or use browser dev tools' responsive mode) from 360px
 up to 1280px to see the column count change at the breakpoints above.

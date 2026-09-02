@@ -1,0 +1,54 @@
+
+/********** HEADER **********/
+header {
+    padding: 40px 0;
+    text-align: center;
+}
+
+/********** MENU **********/
+.menu-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.dish-card {
+    border: 1px solid lightcoral;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.dish-card img {
+    width: 100%;
+}
+
+.card-top {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.desc {
+    font-size: 14px;
+}
+
+.qty {
+    margin: 0 10px;
+    font-weight: 800;
+}
+
+/********** CART **********/
+.cart {
+    position: fixed;
+    top: 20px;
+    right: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    z-index: 10;
+}
+
+.cart h1, .cart h2 {
+    margin: 2px;
+}

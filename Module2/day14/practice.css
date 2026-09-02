@@ -18,7 +18,7 @@ body {
   color: var(--ink);
 }
 
-/* ---------- Page shell: sidebar + content ---------- */
+
 
 .shell {
   display: flex;
@@ -132,7 +132,7 @@ body {
   }
 }
 
-/* ---------- Exercise 1: Navbar ---------- */
+
 
 .ex1 .navbar {
   display: flex;
@@ -174,7 +174,7 @@ body {
   font-weight: bold;
 }
 
-/* ---------- Exercise 2: Cards row ---------- */
+
 
 .ex2 .card-row {
   display: flex;
@@ -193,7 +193,6 @@ body {
   font-weight: bold;
 }
 
-/* ---------- Exercise 3: Gallery ---------- */
 
 .ex3 .gallery {
   display: grid;
@@ -209,7 +208,6 @@ body {
   border-radius: 4px;
 }
 
-/* ---------- Exercise 4: Page layout ---------- */
 
 .ex4 .layout {
   display: grid;
@@ -263,7 +261,6 @@ body {
   }
 }
 
-/* ---------- Exercise 5: Product badge ---------- */
 
 .ex5 .product-card {
   position: relative;
