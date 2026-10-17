@@ -1,114 +1,22 @@
 [
-  {
-    "id": "doro-wat",
-    "name": "Doro Wat",
-    "category": "Wats & Stews",
-    "price": 420,
-    "description": "Slow-simmered chicken in berbere and niter kibbeh, with a hard-boiled egg.",
-    "spice": 3
-  },
-  {
-    "id": "kitfo",
-    "name": "Kitfo",
-    "category": "Wats & Stews",
-    "price": 460,
-    "description": "Minced beef warmed in mitmita and spiced butter, served leb leb.",
-    "spice": 3
-  },
-  {
-    "id": "misir-wat",
-    "name": "Misir Wat",
-    "category": "Vegetarian",
-    "price": 260,
-    "description": "Red lentils stewed with berbere, garlic and onion until deep and thick.",
-    "spice": 2
-  },
-  {
-    "id": "shiro",
-    "name": "Shiro",
-    "category": "Vegetarian",
-    "price": 240,
-    "description": "Chickpea flour simmered to a smooth, garlicky stew.",
-    "spice": 1
-  },
-  {
-    "id": "gomen",
-    "name": "Gomen",
-    "category": "Vegetarian",
-    "price": 220,
-    "description": "Collard greens braised with onion, garlic and ginger.",
-    "spice": 0
-  },
-  {
-    "id": "tibs",
-    "name": "Tibs",
-    "category": "Wats & Stews",
-    "price": 400,
-    "description": "Pan-seared beef cubes with rosemary, jalapeño and onion.",
-    "spice": 2
-  },
-  {
-    "id": "kikil",
-    "name": "Kikil",
-    "category": "Wats & Stews",
-    "price": 380,
-    "description": "Beef shank braised until tender in a light garlic-lemon broth.",
-    "spice": 1
-  },
-  {
-    "id": "injera-basket",
-    "name": "Injera Basket",
-    "category": "Breads & Sides",
-    "price": 60,
-    "description": "Extra sourdough injera, rolled and ready for scooping.",
-    "spice": 0
-  },
-  {
-    "id": "sambusa",
-    "name": "Sambusa",
-    "category": "Breads & Sides",
-    "price": 120,
-    "description": "Crisp pastry triangles filled with spiced lentils, three per order.",
-    "spice": 1
-  },
-  {
-    "id": "dabo-kolo",
-    "name": "Dabo Kolo",
-    "category": "Breads & Sides",
-    "price": 90,
-    "description": "Crunchy little bites of fried spiced wheat, made for snacking.",
-    "spice": 1
-  },
-  {
-    "id": "buna",
-    "name": "Buna",
-    "category": "Beverages",
-    "price": 80,
-    "description": "Coffee roasted and brewed to order, poured from a jebena.",
-    "spice": 0
-  },
-  {
-    "id": "tej",
-    "name": "Tej",
-    "category": "Beverages",
-    "price": 150,
-    "description": "Honey wine steeped with gesho leaf, served chilled.",
-    "spice": 0
-  },
-  {
-    "id": "ambasha",
-    "name": "Ambasha",
-    "category": "Desserts",
-    "price": 130,
-    "description": "Slightly sweet spiced bread, marked in a sunburst pattern.",
-    "spice": 0
-  },
-  {
-    "id": "himbasha-honey",
-    "name": "Honeyed Himbasha",
-    "category": "Desserts",
-    "price": 150,
-    "description": "Warm cardamom bread finished with a honey glaze.",
-    "spice": 0
-  }
+  { "id": 1, "name": "Doro Wat", "category": "Main", "price": 240, "spicy": true },
+  { "id": 2, "name": "Shiro", "category": "Vegetarian", "price": 120, "spicy": false },
+  { "id": 3, "name": "Kitfo", "category": "Main", "price": 320, "spicy": true },
+  { "id": 4, "name": "Tibs", "category": "Main", "price": 280, "spicy": true },
+  { "id": 5, "name": "Injera Firfir", "category": "Breakfast", "price": 100, "spicy": true },
+  { "id": 6, "name": "Beyaynetu", "category": "Vegetarian", "price": 150, "spicy": false },
+  { "id": 7, "name": "Misir Wat", "category": "Vegetarian", "price": 110, "spicy": true },
+  { "id": 8, "name": "Gomen", "category": "Vegetarian", "price": 90, "spicy": false },
+  { "id": 9, "name": "Atkilt Wot", "category": "Vegetarian", "price": 100, "spicy": false },
+  { "id": 10, "name": "Derek Tibs", "category": "Main", "price": 310, "spicy": true },
+  { "id": 11, "name": "Key Wat", "category": "Main", "price": 220, "spicy": true },
+  { "id": 12, "name": "Alicha Wat", "category": "Main", "price": 210, "spicy": false },
+  { "id": 13, "name": "Bozena Shiro", "category": "Main", "price": 180, "spicy": true },
+  { "id": 14, "name": "Ayibe", "category": "Side", "price": 70, "spicy": false },
+  { "id": 15, "name": "Kocho", "category": "Side", "price": 60, "spicy": false },
+  { "id": 16, "name": "Enkulal Firfir", "category": "Breakfast", "price": 110, "spicy": true },
+  { "id": 17, "name": "Fuul", "category": "Breakfast", "price": 90, "spicy": true },
+  { "id": 18, "name": "Genfo", "category": "Breakfast", "price": 130, "spicy": true },
+  { "id": 19, "name": "Chechebsa", "category": "Breakfast", "price": 120, "spicy": true },
+  { "id": 20, "name": "Kik Alicha", "category": "Vegetarian", "price": 100, "spicy": false }
 ]
