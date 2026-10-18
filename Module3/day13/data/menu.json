@@ -1,0 +1,22 @@
+[
+  { "id": 1, "name": "Doro Wat", "category": "Main", "price": 240, "spicy": true, "description": "Slow-cooked chicken in a rich berbere sauce." },
+  { "id": 2, "name": "Shiro", "category": "Vegetarian", "price": 120, "spicy": false, "description": "A smooth, comforting chickpea stew." },
+  { "id": 3, "name": "Kitfo", "category": "Main", "price": 320, "spicy": true, "description": "Seasoned minced beef, a celebrated Ethiopian specialty." },
+  { "id": 4, "name": "Tibs", "category": "Main", "price": 280, "spicy": true, "description": "Sautéed beef with onions and warming spices." },
+  { "id": 5, "name": "Injera Firfir", "category": "Breakfast", "price": 100, "spicy": true, "description": "Shredded injera tossed in a gently spiced sauce." },
+  { "id": 6, "name": "Beyaynetu", "category": "Vegetarian", "price": 150, "spicy": false, "description": "A colorful assortment of fasting-friendly dishes." },
+  { "id": 7, "name": "Misir Wat", "category": "Vegetarian", "price": 110, "spicy": true, "description": "Red lentils simmered with berbere and aromatics." },
+  { "id": 8, "name": "Gomen", "category": "Vegetarian", "price": 90, "spicy": false, "description": "Collard greens cooked with garlic and ginger." },
+  { "id": 9, "name": "Atkilt Wot", "category": "Vegetarian", "price": 100, "spicy": false, "description": "A mild stew of cabbage, potato, and carrot." },
+  { "id": 10, "name": "Derek Tibs", "category": "Main", "price": 310, "spicy": true, "description": "Tender grilled beef with a bold spice blend." },
+  { "id": 11, "name": "Key Wat", "category": "Main", "price": 220, "spicy": true, "description": "A deeply flavored beef stew with berbere." },
+  { "id": 12, "name": "Alicha Wat", "category": "Main", "price": 210, "spicy": false, "description": "A mellow stew seasoned with turmeric and herbs." },
+  { "id": 13, "name": "Bozena Shiro", "category": "Main", "price": 180, "spicy": true, "description": "Chickpea stew enriched with savory meat." },
+  { "id": 14, "name": "Ayibe", "category": "Sides", "price": 70, "spicy": false, "description": "Fresh Ethiopian cottage cheese." },
+  { "id": 15, "name": "Kocho", "category": "Sides", "price": 60, "spicy": false, "description": "Traditional fermented enset flatbread." },
+  { "id": 16, "name": "Enkulal Firfir", "category": "Breakfast", "price": 110, "spicy": true, "description": "Scrambled eggs with tomato, onion, and spice." },
+  { "id": 17, "name": "Fuul", "category": "Breakfast", "price": 90, "spicy": true, "description": "Mashed fava beans with fresh breakfast toppings." },
+  { "id": 18, "name": "Genfo", "category": "Breakfast", "price": 130, "spicy": true, "description": "A hearty Ethiopian barley porridge." },
+  { "id": 19, "name": "Chechebsa", "category": "Breakfast", "price": 120, "spicy": true, "description": "Torn flatbread tossed with spiced butter." },
+  { "id": 20, "name": "Kik Alicha", "category": "Vegetarian", "price": 100, "spicy": false, "description": "Yellow split peas simmered with mild spices." }
+]
