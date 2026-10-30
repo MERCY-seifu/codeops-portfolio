@@ -5,7 +5,7 @@ import { SiteHeader } from './components/SiteHeader.jsx'
 
 export const dynamic = 'force-dynamic'
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
+const siteUrl = process.env.SITE_URL || 'http://localhost:3000'
 
 export const metadata = {
   metadataBase: new URL(siteUrl),

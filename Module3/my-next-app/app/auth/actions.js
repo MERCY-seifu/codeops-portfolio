@@ -51,8 +51,8 @@ export async function signUp(formData) {
     redirect('/signup?error=validation')
   }
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL
-  if (!siteUrl) throw new Error('Set NEXT_PUBLIC_SITE_URL to enable email confirmation links.')
+  const siteUrl = process.env.SITE_URL
+  if (!siteUrl) throw new Error('Set SITE_URL to enable email confirmation links.')
 
   const supabase = await createClient()
   const { data, error } = await supabase.auth.signUp({
