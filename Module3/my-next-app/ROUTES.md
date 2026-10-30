@@ -8,6 +8,9 @@
 | `/menu` | Dish menu | Search, filter, and add dishes; category filter is reflected in the query string. | Search navigation or category links. |
 | `/dish/1` | Dish detail | Choose spice, size, extras, and quantity before adding to the cart. | Select a dish image or title. |
 | `/cart` | Cart | Change quantities, remove items, review delivery, and continue to checkout. | Cart navigation. |
+| `/signin` | Sign in | Authenticate with an Addis Eats account. | Sign-in navigation or protected route. |
+| `/signup` | Sign up | Create an account with email confirmation. | Sign-up link on the sign-in page. |
+| `/auth/callback` | Email confirmation | Exchange the Supabase confirmation code for an authenticated session. | Confirmation email link. |
 | `/checkout` | Checkout | Select a saved or new address, choose a demo payment method, and apply a promo code. | Continue from the cart. |
 | `/confirmation` | Confirmation | Review the completed demo receipt and continue to tracking. | Submit the checkout form. |
 | `/tracking` | Order tracking | View order status, delivery estimate, route illustration, and courier contact controls. | Confirmation, order navigation, or profile. |

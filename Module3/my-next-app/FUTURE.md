@@ -2,8 +2,8 @@
 
 ## Must before this can be presented as a deployed capstone
 
-- Configure Supabase Auth and replace the hardcoded demo users and custom
-  session cookie.
+- Configure the Supabase Auth redirect allow list and Vercel environment
+  variables for both preview and production deployments.
 - Create persistent profile/order tables and enable/test owner-scoped RLS.
 - Configure and deploy the app to Vercel with server-only secrets.
 - Complete the main order flow against the deployed services.

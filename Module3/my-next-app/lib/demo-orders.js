@@ -1,7 +1,6 @@
 import 'server-only'
 
 import { getDishes } from './menu.js'
-import { restaurants } from './restaurants.js'
 
 const statusSteps = ['confirmed', 'preparing', 'on-the-way', 'delivered']
 const statusNames = {
@@ -13,37 +12,6 @@ const statusNames = {
 
 const demoOrders = globalThis.demoAddisOrders || new Map()
 globalThis.demoAddisOrders = demoOrders
-
-function seedOrder(userId, reference, name, dishId, createdAt) {
-  const dish = { 1: { name: 'Doro Wat', price: 240 }, 6: { name: 'Beyaynetu', price: 150 } }[dishId]
-  const restaurant = restaurants[0]
-  demoOrders.set(reference, {
-    reference,
-    userId,
-    name,
-    phone: '+251 91 234 5678',
-    address: 'Bole Road, Addis Ababa · 3rd floor',
-    paymentMethod: 'Cash on delivery',
-    items: [{ id: dishId, name: dish.name, price: dish.price, qty: 1 }],
-    subtotal: dish.price,
-    deliveryFee: dish.price >= 300 ? 0 : 40,
-    discount: 0,
-    total: dish.price + (dish.price >= 300 ? 0 : 40),
-    restaurant: restaurant.name,
-    createdAt,
-  })
-}
-
-if (demoOrders.size === 0) {
-  const now = Date.now()
-  seedOrder('user-selam', 'AE-DEMO-812', 'Selam Tesfaye', 1, now - 22_000)
-  seedOrder('user-dawit', 'AE-DEMO-641', 'Dawit Bekele', 6, now - 45_000)
-}
-
-export function restartDemoTracking(userId) {
-  const [order] = listOwnedOrders(userId)
-  if (order) order.createdAt = Date.now() - 1000
-}
 
 export function getOwnedOrder(userId, reference) {
   const order = demoOrders.get(reference)

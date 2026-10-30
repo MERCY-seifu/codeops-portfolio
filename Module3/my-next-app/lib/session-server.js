@@ -1,19 +1,26 @@
 import 'server-only'
 
-import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
-import { getDemoUser } from './demo-users.js'
-import { SESSION_COOKIE, verifySessionToken } from './auth.js'
+import { getSupabaseConfig } from './supabase/config.js'
+import { createClient } from './supabase/server.js'
 
 export async function getSession() {
-  const cookieStore = await cookies()
-  const session = await verifySessionToken(cookieStore.get(SESSION_COOKIE)?.value)
-  if (!session || !getDemoUser(session.id)) return null
-  return session
+  if (!getSupabaseConfig()) return null
+
+  const supabase = await createClient()
+  const { data: { user }, error } = await supabase.auth.getUser()
+  if (error || !user?.email) return null
+
+  const metadataName = user.user_metadata?.name
+  const name = typeof metadataName === 'string' && metadataName.trim()
+    ? metadataName.trim().slice(0, 80)
+    : user.email.split('@')[0]
+
+  return { id: user.id, name, email: user.email }
 }
 
 export async function requireSession() {
   const session = await getSession()
-  if (!session) redirect('/signin')
+  if (!session) redirect('/signin?next=%2Fprofile')
   return session
 }

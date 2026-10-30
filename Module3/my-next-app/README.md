@@ -2,9 +2,8 @@
 
 Addis Eats is a responsive Addis Ababa restaurant-discovery and Ethiopian
 food-ordering capstone built with the Next.js App Router.
-**This is a local demo, not a deployed capstone yet:** authentication uses
-hardcoded sample users, orders are held in server memory, and no Supabase
-project or Vercel deployment is configured. There is no live URL to share.
+Authentication uses Supabase Auth. Orders are demonstration data held in
+server memory; this app does not process payments or persist order records.
 
 ## Run locally on Windows
 
@@ -12,14 +11,10 @@ project or Vercel deployment is configured. There is no live URL to share.
 Copy-Item .env.example .env.local
 ```
 
-Generate a local signing secret:
-
-```powershell
-node -e "console.log(require('node:crypto').randomBytes(48).toString('base64url'))"
-```
-
-Put the generated value in `.env.local` as `SESSION_SECRET`. Keep that file
-private; it is ignored by Git. Then install and run:
+Set `NEXT_PUBLIC_SUPABASE_URL` to your Supabase project's API URL and
+`NEXT_PUBLIC_SUPABASE_ANON_KEY` to its publishable/anon key in `.env.local`.
+Keep that file private; it is ignored by Git. Configure the Supabase Auth
+redirect URL as described in [AUTH.md](./AUTH.md), then install and run:
 
 ```powershell
 npm ci
@@ -36,8 +31,8 @@ npm run build
 npm run start
 ```
 
-The sign-in screen lists two sample accounts and their shared demo password.
-They are public test credentials, not private or real user accounts.
+Create accounts from `/signup`. Supabase handles password storage and email
+confirmation.
 
 ## Routes
 
@@ -67,9 +62,8 @@ the server from `data/menu.json`; only interaction leaves and the isolated
 cart provider are client components.
 
 The checkout is a front-end demonstration. It does not contact kitchens,
-process payments, track a live courier, or use Supabase. Cart and profile
-state reset on reload; sample orders reset when the server process restarts.
-Do not enter real personal, payment, or account details.
+process payments, or track a live courier. Cart and profile edits reset on
+reload; orders reset when the server process restarts.
 
 ## Ethiopian food photography
 

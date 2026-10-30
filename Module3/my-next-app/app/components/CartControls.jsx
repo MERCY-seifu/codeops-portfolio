@@ -18,8 +18,8 @@ export function CartIndicator({ mobile = false }) {
   }
 
   return (
-    <Link href="/cart" aria-label={`Your order, ${count} items`}>
-      Orders <span className="cart-count">{count}</span>
+    <Link href="/cart" aria-label={`Your cart, ${count} items`}>
+      Cart <span className="cart-count">{count}</span>
     </Link>
   )
 }
